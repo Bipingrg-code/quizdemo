@@ -69,42 +69,42 @@ class QuestionList {
         label1.setAttribute('for','radio-1')
         label1.textContent = option[0]
 
-        label1.appendChild(input1)
+        label1.prepend(input1)
 
         var input2 =  document.createElement('input')
         input2.setAttribute('type','radio')
         input2.setAttribute('name','quest')
-        input2.setAttribute('id','radio-1')
+        input2.setAttribute('id','radio-2')
 
         var label2 = document.createElement('label')
-        label2.setAttribute('for','radio-1')
+        label2.setAttribute('for','radio-2')
         label2.textContent = option[1]
 
-        label2.appendChild(input2)
+        label2.prepend(input2)
         
         var input3 =  document.createElement('input')
         input3.setAttribute('type','radio')
         input3.setAttribute('name','quest')
-        input3.setAttribute('id','radio-1')
+        input3.setAttribute('id','radio-3')
 
         var label3 = document.createElement('label')
-        label3.setAttribute('for','radio-1')
+        label3.setAttribute('for','radio-3')
         label3.textContent = option[2]
-        label3.appendChild(input3)
+        label3.prepend(input3)
         
         var input4 =  document.createElement('input')
         input4.setAttribute('type','radio')
         input4.setAttribute('name','quest')
-        input4.setAttribute('id','radio-1')
+        input4.setAttribute('id','radio-4')
 
         var label4 = document.createElement('label')
-        label4.setAttribute('for','radio-1')
+        label4.setAttribute('for','radio-4')
         label4.textContent = option[3]
-        label4.appendChild(input4)
+        label4.prepend(input4)
 
-        var next = document.createElement('next')
+        var next = document.createElement('div')
         next.setAttribute('type','button')
-        next.setAttribute('value','next')
+        next.setAttribute = "NExt"
         
         var submit = document.createElement('submit')
         submit.setAttribute('type','button')
@@ -113,14 +113,15 @@ class QuestionList {
         form.appendChild(p)
 
         form.appendChild(label1)
-
-        form.appendChild(next)
-
         form.appendChild(label2)
         form.appendChild(label3)
         form.appendChild(label4)
+        
+        form.appendChild(next)
 
         form.appendChild(submit)
+
+        
         return form
     }
 }
